@@ -8,9 +8,29 @@ export default function App() {
   const [size, setSize] = useState(750);
   const [level, setLevel] = useState("A2");
   const [loading, setLoading] = useState(false);
-  const [preview, setPreview] = useState(null);
+  const [previewData, setPreviewData] = useState(null);
 
   const toggle = (k) => setSel(p => p.includes(k) ? p.filter(x => x !== k) : [...p, k]);
+
+  const parseCSV = (csvText) => {
+    const lines = csvText.split('\n').filter(line => line.trim());
+    const headers = lines[0].split(',').map(h => h.replace(/"/g, '').trim());
+    const rows = lines.slice(1, 21).map(line => { // First 20 rows
+      const values = line.split(',').map(v => v.replace(/"/g, '').trim());
+      const row = {};
+      headers.forEach((header, index) => {
+        row[header] = values[index] || '';
+      });
+      return row;
+    });
+    return rows;
+  };
+
+  const getDomainFromTags = (tags) => {
+    const domainTags = ['fitness', 'guitar', 'business', 'travel', 'programming', 'food'];
+    const found = domainTags.find(tag => tags && tags.toLowerCase().includes(tag));
+    return found ? found.charAt(0).toUpperCase() + found.slice(1) : 'Core';
+  };
 
   const onGen = async () => {
     setLoading(true);
@@ -23,10 +43,10 @@ export default function App() {
       a.click();
       URL.revokeObjectURL(url);
       
-      // Show preview of first few rows
+      // Parse CSV for preview
       const text = await blob.text();
-      const lines = text.split('\n').slice(0, 6); // First 6 lines (header + 5 rows)
-      setPreview(lines.join('\n'));
+      const parsedData = parseCSV(text);
+      setPreviewData(parsedData);
     } catch (error) {
       alert('Error generating deck: ' + error.message);
     } finally {
@@ -93,10 +113,39 @@ export default function App() {
             {loading ? "Generating..." : "Generate CSV"}
           </button>
 
-          {preview && (
-            <div className="mt-8 p-4 bg-gray-100 rounded-lg">
-              <h3 className="font-semibold mb-2">Preview (first 5 rows):</h3>
-              <pre className="text-sm text-gray-700 whitespace-pre-wrap">{preview}</pre>
+          {previewData && (
+            <div className="mt-8 bg-gray-900 rounded-lg p-6">
+              <h3 className="text-white text-lg font-semibold mb-4">Preview (first 20 cards)</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-white">
+                  <thead>
+                    <tr className="border-b border-gray-700">
+                      <th className="text-left py-3 px-4 font-medium">Spanish</th>
+                      <th className="text-left py-3 px-4 font-medium">English</th>
+                      <th className="text-left py-3 px-4 font-medium">POS</th>
+                      <th className="text-left py-3 px-4 font-medium">Domain</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {previewData.map((row, index) => (
+                      <tr key={index} className="border-b border-gray-800 hover:bg-gray-800">
+                        <td className="py-3 px-4 font-medium">{row.Front}</td>
+                        <td className="py-3 px-4">{row.Back}</td>
+                        <td className="py-3 px-4">
+                          <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-xs">
+                            {row.POS}
+                          </span>
+                        </td>
+                        <td className="py-3 px-4">
+                          <span className="bg-gray-600 text-gray-200 px-2 py-1 rounded-full text-xs">
+                            {getDomainFromTags(row.Tags)}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           )}
 
