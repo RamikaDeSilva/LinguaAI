@@ -1,0 +1,170 @@
+{
+  "generic": {
+    "noun": [
+      "El {WORD} es importante.",
+      "Me gusta el {WORD}.",
+      "Necesito un {WORD}.",
+      "El {WORD} está aquí.",
+      "Compré un {WORD}."
+    ],
+    "verb": [
+      "Yo {WORD} todos los días.",
+      "Necesito {WORD}.",
+      "Me gusta {WORD}.",
+      "Puedo {WORD}.",
+      "Quiero {WORD}."
+    ],
+    "adjective": [
+      "Es muy {WORD}.",
+      "Me parece {WORD}.",
+      "El {WORD} es bueno.",
+      "Soy {WORD}.",
+      "Está {WORD}."
+    ],
+    "any": [
+      "El {WORD} es útil.",
+      "Me gusta {WORD}.",
+      "Necesito {WORD}.",
+      "El {WORD} está bien.",
+      "Compré {WORD}."
+    ]
+  },
+  "fitness": {
+    "noun": [
+      "Voy al gimnasio para usar el {WORD}.",
+      "El {WORD} es esencial para el ejercicio.",
+      "Necesito el {WORD} para entrenar.",
+      "El {WORD} me ayuda a estar en forma.",
+      "Compré un {WORD} para mi rutina."
+    ],
+    "verb": [
+      "Me gusta {WORD} en el gimnasio.",
+      "Necesito {WORD} para estar fuerte.",
+      "Voy a {WORD} todos los días.",
+      "El ejercicio me ayuda a {WORD}.",
+      "Quiero {WORD} más."
+    ],
+    "adjective": [
+      "El ejercicio es {WORD}.",
+      "Me siento {WORD} después de entrenar.",
+      "El gimnasio es {WORD}.",
+      "Mi rutina es {WORD}.",
+      "El entrenamiento es {WORD}."
+    ]
+  },
+  "guitar": {
+    "noun": [
+      "Toco la guitarra con el {WORD}.",
+      "El {WORD} es importante para tocar.",
+      "Necesito el {WORD} para mi guitarra.",
+      "El {WORD} me ayuda a tocar mejor.",
+      "Compré un {WORD} para mi instrumento."
+    ],
+    "verb": [
+      "Me gusta {WORD} la guitarra.",
+      "Necesito {WORD} para tocar bien.",
+      "Voy a {WORD} todos los días.",
+      "La música me ayuda a {WORD}.",
+      "Quiero {WORD} más canciones."
+    ],
+    "adjective": [
+      "La guitarra es {WORD}.",
+      "Me siento {WORD} cuando toco.",
+      "El sonido es {WORD}.",
+      "Mi técnica es {WORD}.",
+      "La música es {WORD}."
+    ]
+  },
+  "business": {
+    "noun": [
+      "En el trabajo uso el {WORD}.",
+      "El {WORD} es importante para el negocio.",
+      "Necesito el {WORD} para la empresa.",
+      "El {WORD} me ayuda a trabajar mejor.",
+      "Compré un {WORD} para la oficina."
+    ],
+    "verb": [
+      "Me gusta {WORD} en el trabajo.",
+      "Necesito {WORD} para el negocio.",
+      "Voy a {WORD} todos los días.",
+      "El trabajo me ayuda a {WORD}.",
+      "Quiero {WORD} más proyectos."
+    ],
+    "adjective": [
+      "El negocio es {WORD}.",
+      "Me siento {WORD} en el trabajo.",
+      "La empresa es {WORD}.",
+      "Mi trabajo es {WORD}.",
+      "El proyecto es {WORD}."
+    ]
+  },
+  "travel": {
+    "noun": [
+      "Para viajar necesito el {WORD}.",
+      "El {WORD} es importante para el viaje.",
+      "Necesito el {WORD} para viajar.",
+      "El {WORD} me ayuda a viajar mejor.",
+      "Compré un {WORD} para el viaje."
+    ],
+    "verb": [
+      "Me gusta {WORD} cuando viajo.",
+      "Necesito {WORD} para viajar.",
+      "Voy a {WORD} en mi viaje.",
+      "El viaje me ayuda a {WORD}.",
+      "Quiero {WORD} más lugares."
+    ],
+    "adjective": [
+      "El viaje es {WORD}.",
+      "Me siento {WORD} cuando viajo.",
+      "El lugar es {WORD}.",
+      "Mi experiencia es {WORD}.",
+      "El destino es {WORD}."
+    ]
+  },
+  "programming": {
+    "noun": [
+      "Para programar uso el {WORD}.",
+      "El {WORD} es importante para el código.",
+      "Necesito el {WORD} para programar.",
+      "El {WORD} me ayuda a programar mejor.",
+      "Compré un {WORD} para programar."
+    ],
+    "verb": [
+      "Me gusta {WORD} código.",
+      "Necesito {WORD} para programar.",
+      "Voy a {WORD} todos los días.",
+      "La programación me ayuda a {WORD}.",
+      "Quiero {WORD} más programas."
+    ],
+    "adjective": [
+      "El código es {WORD}.",
+      "Me siento {WORD} cuando programo.",
+      "El programa es {WORD}.",
+      "Mi código es {WORD}.",
+      "El software es {WORD}."
+    ]
+  },
+  "food": {
+    "noun": [
+      "Para cocinar uso el {WORD}.",
+      "El {WORD} es importante para la comida.",
+      "Necesito el {WORD} para cocinar.",
+      "El {WORD} me ayuda a cocinar mejor.",
+      "Compré un {WORD} para la cocina."
+    ],
+    "verb": [
+      "Me gusta {WORD} comida.",
+      "Necesito {WORD} para cocinar.",
+      "Voy a {WORD} todos los días.",
+      "La cocina me ayuda a {WORD}.",
+      "Quiero {WORD} más platos."
+    ],
+    "adjective": [
+      "La comida es {WORD}.",
+      "Me siento {WORD} cuando como.",
+      "El plato es {WORD}.",
+      "Mi cocina es {WORD}.",
+      "El sabor es {WORD}."
+    ]
+  }
+}
