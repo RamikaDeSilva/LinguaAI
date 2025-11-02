@@ -1,4 +1,4 @@
-# Interest-Tuned Spanish Anki Deck
+# Interest-Tuned Language Learning Application
 
 Generate personalized Spanish vocabulary decks for Anki based on your interests.
 
